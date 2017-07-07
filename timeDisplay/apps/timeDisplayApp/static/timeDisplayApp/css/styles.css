@@ -1,0 +1,20 @@
+body{
+     width: 600px;
+     font-family: sans-serif;
+     text-align: center;
+}
+
+#current{
+     margin: 50px 50%;
+     border: 1px black solid;
+     width: 200px;
+     padding: 30px;
+
+}
+
+h1{
+     margin: 0 50%;
+     width: 200px;
+     padding: 30px;
+
+}
