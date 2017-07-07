@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          <title>My Portfolio</title>
+          <link rel="stylesheet" href = "..\static\realPortfolioApp\css\styles.css"
+     </head>
+     <body>
+          <h1>Hi, I'm Valerie</h1>
+          <h3>Welcome to My Portfolio</h3>
+          <div class="section">
+               <a href = "{% url 'projects' %}">Projects</a>
+               <div class="subsection">
+                    I have a variety of projects both personal and contact.  They are built using Python, Swift, and JavaScript.
+               </div>
+          </div>
+          <div class="section">
+               <a href = "{% url 'about' %}">About Me</a>
+               <div class="subsection">
+                    A little about my background and why I do what I do.
+               </div>
+          </div>
+          <div class="section">
+               <a href = "{% url 'testimonials' %}">Testimonials</a>
+               <div class="subsection">
+                    What my clients and mentors have to say about my projects and work ethic.
+               </div>
+          </div>
+
+     </body>
+</html>

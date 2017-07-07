@@ -1,0 +1,13 @@
+.section{
+     width:200px;
+     display: inline-block;
+     height: 100px;
+     vertical-align: top;
+     text-align: center;
+}
+
+.subsection{
+     margin-top: 20px;
+     border: 1px solid black;
+     height: 100px
+}
