@@ -1,0 +1,2 @@
+git remote add origin https://github.com/VxC42/djangoIntro_assignments.git
+git push -u origin master
