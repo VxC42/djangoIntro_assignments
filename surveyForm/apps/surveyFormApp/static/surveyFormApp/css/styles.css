@@ -1,0 +1,51 @@
+*{
+     margin:0;
+     padding:0;
+}
+
+body{
+     font-family: sans-serif;
+     width: 600px;
+
+
+}
+div{
+     width: 350px;
+     height: 300px;
+     border: 2px solid black;
+     padding: 20px;
+     margin: 30px 50%;
+
+
+}
+#success{
+     height: auto;
+     background:#b6d7a8;
+     font-weight: bold;
+}
+#info{
+     width: auto;
+     height: auto;
+     border:none;
+     padding: 0px;
+     margin: 20px;
+}
+
+p{
+     margin-bottom: 15px;
+
+}
+
+select, .nameArea{
+     width: 200px;
+     float:right;
+}
+
+textarea{
+     width: 350px;
+     height: 150px;
+}
+
+h4{
+     text-decoration: underline;
+}
