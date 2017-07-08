@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <title>Disappearing Ninjas</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'disappearingNinjaApp/css/styles.css' %}">
+</head>
+<body>
+    {% if displayAll == True %}
+         <img src="{%static 'disappearingNinjaApp/images/donatello.jpg'%}">
+         <img src="{%static 'disappearingNinjaApp/images/leonardo.jpg'%}">
+         <img src="{%static 'disappearingNinjaApp/images/michelangelo.jpg'%}">
+         <img src="{%static 'disappearingNinjaApp/images/raphael.jpg'%}">
+    {%elif color == 'red' %}
+         <img src="{%static 'disappearingNinjaApp/images/raphael.jpg'%}">
+    {%elif color == 'blue' %}
+        <img src="{%static 'disappearingNinjaApp/images/leonardo.jpg'%}">
+    {%elif color == 'purple' %}
+         <img src="{%static 'disappearingNinjaApp/images/donatello.jpg'%}">
+    {%elif color == 'orange' %}
+         <img src="{%static 'disappearingNinjaApp/images/michelangelo.jpg'%}">
+    {%else%}
+         <img src="{%static 'disappearingNinjaApp/images/notapril.jpg'%}">
+     {% endif %}
+
+</body>
+</html>
