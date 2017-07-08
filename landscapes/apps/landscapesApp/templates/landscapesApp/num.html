@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          <title>Random Routing</title>
+          {% load staticfiles%}
+          <link rel="stylesheet" href="{% static 'landscapesApp/css/styles.css' %}">
+     </head>
+     <body>
+
+          <h2> Your Random Image of the Day:</h2>
+          {% if num > 0 and num < 11 %}
+               <img src="{%static 'landscapesApp/images/snow.jpg'%}">
+               {%endif%}
+          {% if num > 10 and num < 21 %}
+               <img src="{%static 'landscapesApp/images/desert.jpg'%}">
+               {%endif%}
+          {% if num > 20 and num < 31 %}
+               <img src="{%static 'landscapesApp/images/forest.jpg'%}">
+               {%endif%}
+          {% if num > 30 and num < 41 %}
+               <img src="{%static 'landscapesApp/images/vineyard.jpg'%}">
+               {%endif%}
+          {% if num > 40 and num < 51 %}
+               <img src="{%static 'landscapesApp/images/tropical.jpg'%}">
+               {%endif%}
+          {% if num > 50 %}
+               {{error}}
+               {%endif%}
+     </body>
+</html>
