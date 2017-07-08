@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          <title>Surprise Me!</title>
+          {% load staticfiles%}
+          <link rel="stylesheet" href="{% static 'surpriseMeApp/css/styles.css' %}">
+     </head>
+     <body>
+          <div class="container">
+               <h1> Surprise:</h1>
+               <div class="result">
+                    <ul>{%for result in results%}
+                         <li>{{result}}</li>
+                         {%endfor%}</ul>
+               </div>
+          </div>
+     </body>
+</html>
