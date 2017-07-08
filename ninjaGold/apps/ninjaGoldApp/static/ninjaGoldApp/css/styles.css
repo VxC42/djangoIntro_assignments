@@ -1,0 +1,65 @@
+*{
+     padding: 0;
+     margin: 0;
+}
+body{
+     width: 850px;
+     font-family: sans-serif;
+     padding: 25px;
+
+
+}
+.form{
+     width: 180px;
+     height: 180px;
+     border: 2px solid black;
+     display: inline-block;
+     margin: 0 20px 20px 0;
+     text-align: center;
+}
+
+.form>h3{
+     margin-top:40px;
+}
+
+h3, h4{
+     display: inline-block;
+     margin-bottom: 15px;
+
+}
+#events{
+     width: 810px;
+     height: 150px;
+     font-size: 12px;
+     resize: none;
+     border: 2px solid black
+
+}
+
+#list{
+     margin: 5px;
+     font-size: 14px;
+}
+
+input{
+     margin-top: 15px;
+}
+
+#goldCount{
+     display: inline-block;
+     width: 150px;
+     height: 20px;
+     font-size: 90%;
+     border: 1px solid black;
+     vertical-align: top;
+     padding: 2px;
+}
+
+.minusGold{
+     color: red;
+}
+
+
+.plusGold{
+     color: green;
+}

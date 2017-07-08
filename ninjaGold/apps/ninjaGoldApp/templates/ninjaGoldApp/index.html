@@ -1,0 +1,62 @@
+<html>
+<head>
+     <title>Counter</title>
+     {% load staticfiles %}
+     <link rel="stylesheet" href="{% static 'ninjaGoldApp/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+
+</head>
+<body>
+     <div id="gold">
+          <h3> Your Gold:</h3>
+          <span id="goldCount">{{gold}}</span>
+     </div>
+     <div class="form">
+          <h3>Farm</h3>
+          <p> (earns 10-20 gold)</p>
+          <form action="/process_money" method="post">
+                {% csrf_token %}
+               <input type="hidden" name="building" value="farm" />
+               <input type="submit" value="Find Gold!"/>
+          </form>
+     </div>
+     <div class="form">
+          <h3>Cave</h3>
+          <p> (earns 5-10 gold)</p>
+          <form action="/process_money" method="post">
+                {% csrf_token %}
+               <input type="hidden" name="building" value="cave" />
+               <input type="submit" value="Find Gold!"/>
+          </form>
+     </div>
+     <div class="form">
+          <h3>House</h3>
+          <p> (earns 2-5 gold)</p>
+          <form action="/process_money" method="post">
+                {% csrf_token %}
+               <input type="hidden" name="building" value="house" />
+               <input type="submit" value="Find Gold!"/>
+          </form>
+     </div>
+     <div class="form">
+          <h3>Casino</h3>
+          <p> (earns/takes 0-50 gold)</p>
+          <form action="/process_money" method="post">
+                {% csrf_token %}
+               <input type="hidden" name="building" value="casino" />
+               <input type="submit" value="Find Gold!"/>
+          </form>
+     </div>
+     <h4> Activites:</h4>
+     <div id="events">
+          <div id="list">
+                    {%for event in events%}
+                         <p>{{event}}</p>
+                    {%endfor%}
+          </div>
+     </div>
+     <form action="/clear" method='POST'>
+          {% csrf_token %}
+          <input type="submit" value="Reset"/>
+
+</body>
+</html>
