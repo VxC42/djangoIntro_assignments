@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          {% load staticfiles %}
+          <link rel="stylesheet" href="{% static 'validationApp/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+          <title>Username Validator</title>
+     </head>
+     <body>
+          <h3><span class="green"> The username {{username.username}} is valid!  Thank You!</span></h3>
+          <div class="list">
+               Usernames entered:
+               <table>
+                    {%for user in users %}
+                    <tr>
+                         <td>{{user.username}}@codingdojo.com</td>
+                         <td>{{user.created_at}}</td>
+                         <td><a href="/delete/{{user.id}}">delete</td>
+                    </tr>
+                    {% endfor %}
+               </table>
+          </div>
+
+     </body>
+</html>

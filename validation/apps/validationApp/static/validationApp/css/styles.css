@@ -1,0 +1,31 @@
+*{
+     margin:0;
+     padding:0;
+}
+body{
+     width: 800px;
+     font-family: sans-serif;
+     padding-top: 50px;
+     /*border: 1px black solid;*/
+}
+.userInput, .list{
+     width: 400px;
+     margin: 100px 25%;
+}
+
+.green{
+     background-color: #5b8c22;
+     color: #ffffff;
+     margin: 0 25%;
+     padding: 20px;
+}
+
+.red{
+     background-color: #bb0120;
+     color: #ffffff;
+     margin: 0 25%;
+     padding: 20px;
+}
+table{
+     margin-left: 20px;
+}
