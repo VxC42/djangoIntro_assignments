@@ -1,0 +1,60 @@
+*{
+     margin:0;
+     padding:0;
+}
+
+body{
+     font-family: sans-serif;
+     padding: 20px;
+}
+
+.form{
+     width: 450px;
+     margin-bottom: 25px;
+}
+.name{
+     width:393px;
+     margin-bottom: 15px;
+}
+.description{
+     vertical-align: top;
+     width: 358px;
+     height: 100px;
+     resize: none;
+     margin-bottom: 15px
+}
+.button{
+     margin-left: 411px;
+     padding: 0 5px;
+}
+.delete>form{
+     display: inline-block;
+     margin: 20px 0 0 90px;
+}
+.delete{
+     margin-top: 30px;
+     line-height: 40px;
+}
+.delete>form>input{
+     padding: 0 5px;
+}
+
+table{
+     width: 750px;
+     text-align: left;
+}
+table, th, td{
+     border: 1px solid black;
+     border-collapse: collapse;
+}
+
+th{
+     background-color: #4d4e4f;
+     color:#ffffff;
+     padding: 3px;
+}
+td{
+     padding: 3px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
