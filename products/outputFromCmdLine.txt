@@ -1,0 +1,8 @@
+>>> for all in products:
+...     print all.name, all.description, all.price, all.weight, all.cost, all.category
+...
+
+OUTPUT:
+Galaxy Tab 3 a tablet made by Samsung 499.99 15.2 ounces 499.99 electronic
+iPad a tablet made by Apple 239.99 .93 pounds 239.99 electronic
+Surface a tablet made by Microsoft 899.99 27.5 ounces 899.99 electronic
