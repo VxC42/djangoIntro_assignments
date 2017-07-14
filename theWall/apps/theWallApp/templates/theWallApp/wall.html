@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <title>The Wall</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'theWallApp/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+     <div id="head">
+          <h1> DOJO WALL </h1>
+          <div class="right">
+               <h5> {{user[0]['first_name']}} {{user[0]['last_name']}}</h5>
+               <a href="/logout" >log off</a>
+          </div>
+     </div>
+
+     <div id="postMsg">
+          <h2> Post a message </h2>
+          <form action ="/postMsg" method='post'>
+          <textarea name="message"></textarea>
+          <span class="right"><input class="button" type="submit" value="Post a message"></span>
+          </form>
+     </div>
+
+     <div class="message">
+          {%if messages%}
+          {%for message in messages%}
+          <ul>
+               <li>{{message['first_name']}} - {{message['created_at']}}
+                    <p>"{{message['message']}}"</p> </li>
+               <ul>
+                    {%if message['comments']%}
+                    {%for comment in message['comments']%}
+                    <li>{{comment['first_name']}} - {{comment['created_at']}}
+                         <p>"{{comment['comment']}}"</p></li>
+                    {%endfor%}
+                    {%endif%}
+               </ul>
+          </ul>
+
+          <div class="comment">
+               <h3> Post a comment </h3>
+               <form action ="/postComment/{{message['message_id']}}" method='post'>
+               <textarea name="comment"></textarea>
+               <span class="right"><input class="button" type="submit" value="Post a comment"></span>
+               </form>
+          </div>
+          {%endfor%}
+          {%endif%}
+     </div>
+
+
+
+</body>
+</html>

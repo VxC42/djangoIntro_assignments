@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <title>THE WALL</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'theWallApp/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+
+     <div id="flashes">
+
+     </div>
+
+     <div id="regForm">
+          <h1>Registration</h1>
+          <hr>
+
+          <form action ='/register' method='post'>
+          <p>First Name:<input class="textfield" type="text" name ="first_name"></p>
+          <p>Last Name:<input class="textfield" type="text" name ="last_name"></p>
+          <p>Email:<input class="textfield" type="text" name ="email">
+          <p>Password:<input class="textfield" type="password" name ="password"></p>
+          <p>Confirm Password:<input class="textfield" type="password" name ="confirm_password"></p>
+          <input class="button" type="submit" value="Register"></p>
+          </form>
+     </div>
+     <div id="loginForm">
+          <h1>Login</h1>
+          <hr>
+          <form action ='/login' method='post'>
+
+          <p>Email:<input class="textfield" type="text" name ="email">
+          <p>Password:<input class="textfield" type="password" name ="password"></p>
+          <input class="button" type="submit" value="Login"></p>
+
+          </form>
+     </div>
+     <div id="flashes">
+          <p>{%with messages = get_flashed_messages()%}
+               {%if messages%}
+               <ul>
+                    {%for message in messages%}
+                         <li>{{message}}</li>
+                    {%endfor%}
+               </ul>
+               {%endif%}
+          {%endwith%}</p>
+     </div>
+
+</body>
+</html>
