@@ -1,0 +1,391 @@
+Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\Users\valer>cd C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   realPortfolio/apps/realPortfolioApp/templates/realPortfolioApp/index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        djangoEnv/
+        products/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro>git add products
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   products/apps/__init__.py
+        new file:   products/apps/__init__.pyc
+        new file:   products/apps/productsApp/__init__.py
+        new file:   products/apps/productsApp/__init__.pyc
+        new file:   products/apps/productsApp/admin.py
+        new file:   products/apps/productsApp/admin.pyc
+        new file:   products/apps/productsApp/apps.py
+        new file:   products/apps/productsApp/migrations/0001_initial.py
+        new file:   products/apps/productsApp/migrations/0001_initial.pyc
+        new file:   products/apps/productsApp/migrations/__init__.py
+        new file:   products/apps/productsApp/migrations/__init__.pyc
+        new file:   products/apps/productsApp/models.py
+        new file:   products/apps/productsApp/models.pyc
+        new file:   products/apps/productsApp/templates/productsApp/index.html
+        new file:   products/apps/productsApp/tests.py
+        new file:   products/apps/productsApp/urls.py
+        new file:   products/apps/productsApp/urls.pyc
+        new file:   products/apps/productsApp/views.py
+        new file:   products/apps/productsApp/views.pyc
+        new file:   products/db.sqlite3
+        new file:   products/manage.py
+        new file:   products/outputFromCmdLine.txt
+        new file:   products/products/__init__.py
+        new file:   products/products/__init__.pyc
+        new file:   products/products/settings.py
+        new file:   products/products/settings.pyc
+        new file:   products/products/urls.py
+        new file:   products/products/urls.pyc
+        new file:   products/products/wsgi.py
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   realPortfolio/apps/realPortfolioApp/templates/realPortfolioApp/index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        djangoEnv/
+
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro>git commit -m "added files for products assignment"
+[master 93d0d5a] added files for products assignment
+ 29 files changed, 268 insertions(+)
+ create mode 100644 products/apps/__init__.py
+ create mode 100644 products/apps/__init__.pyc
+ create mode 100644 products/apps/productsApp/__init__.py
+ create mode 100644 products/apps/productsApp/__init__.pyc
+ create mode 100644 products/apps/productsApp/admin.py
+ create mode 100644 products/apps/productsApp/admin.pyc
+ create mode 100644 products/apps/productsApp/apps.py
+ create mode 100644 products/apps/productsApp/migrations/0001_initial.py
+ create mode 100644 products/apps/productsApp/migrations/0001_initial.pyc
+ create mode 100644 products/apps/productsApp/migrations/__init__.py
+ create mode 100644 products/apps/productsApp/migrations/__init__.pyc
+ create mode 100644 products/apps/productsApp/models.py
+ create mode 100644 products/apps/productsApp/models.pyc
+ create mode 100644 products/apps/productsApp/templates/productsApp/index.html
+ create mode 100644 products/apps/productsApp/tests.py
+ create mode 100644 products/apps/productsApp/urls.py
+ create mode 100644 products/apps/productsApp/urls.pyc
+ create mode 100644 products/apps/productsApp/views.py
+ create mode 100644 products/apps/productsApp/views.pyc
+ create mode 100644 products/db.sqlite3
+ create mode 100644 products/manage.py
+ create mode 100644 products/outputFromCmdLine.txt
+ create mode 100644 products/products/__init__.py
+ create mode 100644 products/products/__init__.pyc
+ create mode 100644 products/products/settings.py
+ create mode 100644 products/products/settings.pyc
+ create mode 100644 products/products/urls.py
+ create mode 100644 products/products/urls.pyc
+ create mode 100644 products/products/wsgi.py
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro>git push
+Counting objects: 31, done.
+Delta compression using up to 24 threads.
+Compressing objects: 100% (29/29), done.
+Writing objects: 100% (31/31), 12.21 KiB | 0 bytes/s, done.
+Total 31 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), completed with 1 local object.
+To https://github.com/VxC42/djangoIntro_assignments.git
+   8031908..93d0d5a  master -> master
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro>django-admit startproject books
+'django-admit' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro>django-admin startproject books
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro>cd books
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro\books>mkdir apps
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro\books>cd apps
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro\books\apps>nul> __init__.py
+Access is denied.
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro\books\apps>python ../manage.py startapp booksApp
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro\books\apps>cd..
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro\books>python manage.py makemigrations
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    execute_from_command_line(sys.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 363, in execute_from_command_line
+    utility.execute()
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 337, in execute
+    django.setup()
+  File "C:\Python27\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Python27\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "C:\Python27\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro\books\apps\booksApp\models.py", line 6, in <module>
+    class Book(models.Model):
+  File "C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro\books\apps\booksApp\models.py", line 12, in Book
+    updated_at = models.DateTimeFIeld(auto_now=True)
+AttributeError: 'module' object has no attribute 'DateTimeFIeld'
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro\books>python manage.py makemigrations
+Migrations for 'booksApp':
+  apps\booksApp\migrations\0001_initial.py
+    - Create model Book
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro\books>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, booksApp, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying booksApp.0001_initial... OK
+  Applying sessions.0001_initial... OK
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro\books>python manage.py shell
+Python 2.7.10 (default, May 23 2015, 09:40:32) [MSC v.1500 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from apps.booksApp.models import Book
+>>> Book.objects.create(title="Inferno", author="Dante", published_date="April 11, 1472", category="Poetry")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 394, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 806, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 836, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 922, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 961, in _do_insert
+    using=using, raw=raw)
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 1063, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 1098, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 1051, in as_sql
+    for obj in self.query.objs
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 990, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 770, in get_db_prep_save
+    prepared=False)
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 1459, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 1438, in get_prep_value
+    value = super(DateTimeField, self).get_prep_value(value)
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 1296, in get_prep_value
+    return self.to_python(value)
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 1423, in to_python
+    params={'value': value},
+ValidationError: [u"'April 11, 1472' value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format."]
+>>> Book.objects.create(title="Inferno", author="Dante", published_date=1472-04-11, category="Poetry")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 394, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 806, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 836, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 922, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 961, in _do_insert
+    using=using, raw=raw)
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 1063, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 1098, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 1051, in as_sql
+    for obj in self.query.objs
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 990, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 770, in get_db_prep_save
+    prepared=False)
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 1459, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 1438, in get_prep_value
+    value = super(DateTimeField, self).get_prep_value(value)
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 1296, in get_prep_value
+    return self.to_python(value)
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 1399, in to_python
+    parsed = parse_datetime(value)
+  File "C:\Python27\lib\site-packages\django\utils\dateparse.py", line 94, in parse_datetime
+    match = datetime_re.match(value)
+TypeError: expected string or buffer
+>>> Book.objects.create(title="Inferno", author="Dante", published_date="1472-04-11", category="Poetry")
+C:\Python27\lib\site-packages\django\db\models\fields\__init__.py:1451: RuntimeWarning: DateTimeField Book.published_date received a naive datetime (1472-04-11 00:00:00) while time zone support is active.
+  RuntimeWarning)
+<Book: Book object>
+>>> book
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'book' is not defined
+>>> books = Book.objects.all()
+>>> books
+<QuerySet [<Book: Book object>]>
+>>> books.published_date
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'QuerySet' object has no attribute 'published_date'
+>>> for each in books
+  File "<console>", line 1
+    for each in books
+                    ^
+SyntaxError: invalid syntax
+>>> for each in books:
+...     print each.published_date
+...
+1472-04-11 00:00:00+00:00
+>>> Book.objects.create(title="Pride and Prejudice", author="Jane Austen", published_date="1813-01-28", category="Fiction")
+C:\Python27\lib\site-packages\django\db\models\fields\__init__.py:1451: RuntimeWarning: DateTimeField Book.published_date received a naive datetime (1813-01-28 00:00:00) while time zone support is active.
+  RuntimeWarning)
+<Book: Book object>
+>>> Book.objects.create(title="Born a Crime", author="Trevor Noah", published_date="2016-11-15", category="Autobiography")
+C:\Python27\lib\site-packages\django\db\models\fields\__init__.py:1451: RuntimeWarning: DateTimeField Book.published_date received a naive datetime (2016-11-15 00:00:00) while time zone support is active.
+  RuntimeWarning)
+<Book: Book object>
+>>> Book.objects.create(title="The Tale of Genji", author="Murasaki Shikibu", published_date="1008", category="Monogatari")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 394, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 806, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 836, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 922, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 961, in _do_insert
+    using=using, raw=raw)
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 1063, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 1098, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 1051, in as_sql
+    for obj in self.query.objs
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 990, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 770, in get_db_prep_save
+    prepared=False)
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 1459, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 1438, in get_prep_value
+    value = super(DateTimeField, self).get_prep_value(value)
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 1296, in get_prep_value
+    return self.to_python(value)
+  File "C:\Python27\lib\site-packages\django\db\models\fields\__init__.py", line 1423, in to_python
+    params={'value': value},
+ValidationError: [u"'1008' value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format."]
+>>> Book.objects.create(title="The Tale of Genji", author="Murasaki Shikibu", published_date="1008-01-01", category="Monogatari")
+C:\Python27\lib\site-packages\django\db\models\fields\__init__.py:1451: RuntimeWarning: DateTimeField Book.published_date received a naive datetime (1008-01-01 00:00:00) while time zone support is active.
+  RuntimeWarning)
+<Book: Book object>
+>>> Book.objects.create(title="The Hobbit", author="J.R.R. Tolkien", published_date="1937-09-21", category="Fantasy")
+C:\Python27\lib\site-packages\django\db\models\fields\__init__.py:1451: RuntimeWarning: DateTimeField Book.published_date received a naive datetime (1937-09-21 00:00:00) while time zone support is active.
+  RuntimeWarning)
+<Book: Book object>
+>>> books
+<QuerySet [<Book: Book object>]>
+>>> books = Book.objects.all()
+>>> books
+<QuerySet [<Book: Book object>, <Book: Book object>, <Book: Book object>, <Book: Book object>, <Book: Book object>]>
+>>> for each in books:
+...     print each.title, each.author, each.published_date, each.category
+...
+Inferno Dante 1472-04-11 00:00:00+00:00 Poetry
+Pride and Prejudice Jane Austen 1813-01-28 00:00:00+00:00 Fiction
+Born a Crime Trevor Noah 2016-11-15 00:00:00+00:00 Autobiography
+The Tale of Genji Murasaki Shikibu 1008-01-01 00:00:00+00:00 Monogatari
+The Hobbit J.R.R. Tolkien 1937-09-21 00:00:00+00:00 Fantasy
+>>> python manage.py makemigrations
+  File "<console>", line 1
+    python manage.py makemigrations
+                ^
+SyntaxError: invalid syntax
+>>> exit()
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro\books>python manage.py makemigrations
+You are trying to add a non-nullable field 'in_print' to book without a default; we can't do that (the database needs something to populate existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option: 1
+Please enter the default value now, as valid Python
+The datetime and django.utils.timezone modules are available, so you can do e.g. timezone.now
+Type 'exit' to exit this prompt
+>>> True
+Migrations for 'booksApp':
+  apps\booksApp\migrations\0002_auto_20170713_1750.py
+    - Add field in_print to book
+    - Alter field published_date on book
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro\books>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, booksApp, contenttypes, sessions
+Running migrations:
+  Applying booksApp.0002_auto_20170713_1750... OK
+
+C:\Users\valer\Desktop\CodingDojo_assignments\02_Python\06_djangoIntro\books>python manage.py shell
+Python 2.7.10 (default, May 23 2015, 09:40:32) [MSC v.1500 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from apps.booksApp.models import Book
+>>> books = Book.objects.all()
+>>> for book in books:
+...     print book.title, book.author, book.published_date, book.category, book.in_print
+...
+Inferno Dante None Poetry True
+Pride and Prejudice Jane Austen None Fiction True
+Born a Crime Trevor Noah None Autobiography True
+The Tale of Genji Murasaki Shikibu None Monogatari True
+The Hobbit J.R.R. Tolkien None Fantasy True
+>>>
