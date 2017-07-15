@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          {% load staticfiles %}
+          <link rel="stylesheet" href="{% static 'loginRegApp/css/styles.css' %}" media="screen">
+          <title>Login and Registration</title>
+     </head>
+     <body>
+
+          <div id="flashes">
+
+          </div>
+
+          <div id="regForm">
+               <h1>Registration</h1>
+               <hr>
+
+               <form action ='/register' method='post'>
+               <p>First Name:<input class="textfield" type="text" name ="first_name"></p>
+               <p>Last Name:<input class="textfield" type="text" name ="last_name"></p>
+               <p>Email:<input class="textfield" type="text" name ="email">
+               <p>Password:<input class="textfield" type="password" name ="pw"></p>
+               <p>Confirm Password:<input class="textfield" type="password" name ="confirm_pw"></p>
+               <input class="button" type="submit" value="Register"></p>
+               {% csrf_token %}
+               </form>
+          </div>
+          <div id="loginForm">
+               <h1>Login</h1>
+               <hr>
+               <form action ='/login' method='post'>
+
+               <p>Email:<input class="textfield" type="text" name ="email">
+               <p>Password:<input class="textfield" type="password" name ="pw"></p>
+               <input class="button" type="submit" value="Login"></p>
+               {% csrf_token %}
+               </form>
+          </div>
+          <div id="flashes">
+               <p>
+                    {%if errors%}
+                    <ul>
+                         {%for message in errors%}
+                              <li>{{message}}</li>
+                         {%endfor%}
+                    </ul>
+                    {%endif%}
+               </p>
+          </div>
+     </body>
+</html>

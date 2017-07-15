@@ -1,0 +1,53 @@
+*{
+     padding:0;
+     margin:0;
+}
+
+body{
+     width: 850px;
+     font-family: 'helvetica';
+     padding: 20px;
+     font-size: 14px;
+
+}
+
+h1{
+     text-align: left;
+}
+hr{
+     margin: 5px 0;
+}
+
+#regForm, #loginForm{
+     width: 385px;
+     text-align: right;
+     margin-top: 10px;
+     display: inline-block;
+     vertical-align: top;
+     margin-right: 30px;
+     font-weight: bold;
+     margin-bottom: 15px;
+}
+
+#flashes{
+     margin-left: 50px;
+     color: red;
+     list-style-type: square ;
+}
+
+input{
+     margin: 5px;
+
+}
+
+li{
+     list-style-type: circle ;
+}
+
+ul{
+     padding-left: 40px;
+
+}
+form{
+     display:inline-block;
+}
