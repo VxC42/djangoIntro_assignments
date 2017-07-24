@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          {% load staticfiles %}
+          <link rel="stylesheet" href="{% static 'reviewApp/css/styles.css' %}" media="screen">
+          <title>Books Home</title>
+     </head>
+     <body>
+
+          <div class="nav">
+               <span class="right"><a href="/books"> Home</a>
+               <a href="/logout"> Logout </a></span>
+          </div>
+          <div class="divbox">
+
+               <h2> {{book.title}}</h2>
+               <h4> {{book.author}}</h4>
+
+               <h4>Reviews</h4>
+               {%for review in reviews%}
+               <hr>
+                    <ul>
+                         <li>Rating: {{review.rating}}</li>
+                         <li><a href="/user/{{review.users.id}}">{{review.users.name}}</a> says:
+                              <span class='italics'>"{{review.review}}"</span>
+                         </li>
+                         <li>
+                              <span class='italics'>Posted on {{review.created_at}}</span>
+
+                              {%if review.users == user%}
+                              <span class='right'><a href="/delete/{{review.id}}">Delete this review</a></span>
+                              {%endif%}
+
+                         </li>
+
+
+                    </ul>
+               {%endfor%}
+
+
+          </div>
+          <div class="other">
+               Add a review:
+               <form action="/addBook" method="post">
+                    <input type='hidden' value='{{book.title}}' name='title'>
+                    <input type='hidden' value='{{book.author}}' name='authorType'>
+                    <p>Review: <textarea name="review"></textarea></p>
+                    <p>Rating:
+                         <select id="rating" name="rating">
+                              <option value="5">5</option>
+                              <option value="4">4</option>
+                              <option value="3">3</option>
+                              <option value="2">2</option>
+                              <option value="1">1</option>
+                         </select>
+                    </p>
+
+                    <input class="button" type="submit" value="Submit Review">
+                    {%csrf_token%}
+               </form>
+          </div>
+
+     </body>
+</html>

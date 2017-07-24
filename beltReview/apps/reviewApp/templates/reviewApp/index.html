@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          {% load staticfiles %}
+          <link rel="stylesheet" href="{% static 'reviewApp/css/styles.css' %}" media="screen">
+          <title>Welcome</title>
+     </head>
+     <body>
+          <h1> Welcome!</h1>
+          {%if errors%}
+          <div id="flashes">
+               <p>
+
+                    <ul>
+                         {%for message in errors%}
+                              <li>{{message}}</li>
+                         {%endfor%}
+                    </ul>
+
+               </p>
+          </div>
+          {%endif%}
+          <div>
+               <h2> register </h2>
+               <div id="register">
+                    <form action="register" method="post">
+                         <p>Name: <input class="textfield" type="text" name="name"></p>
+                         <p>Username: <input class="textfield" type="text" name="username"></p>
+                         <p>email: <input class="textfield" type="text" name="email"></p>
+                         <p>password: <input class="textfield" type="password" name="password"></p>
+                         <p><span class="subtype">*Password must be at least 8 characters</span></p>
+                         <p>confirm password: <input class="textfield" type="password" name="confirm_password"></p>
+                         <p><input class="button" type="submit" value="register"></p>
+                         {%csrf_token%}
+                    </form>
+               </div>
+          </div>
+          <div>
+               <h2> login </h2>
+               <div id="login">
+                    <form action="login" method="post">
+                         <p>email: <input class="textfield" type="text" name="email"></p>
+                         <p>password: <input class="textfield" type="password" name="password"></p>
+                         <p><input class="button" type="submit" value="login"></p>
+                         {%csrf_token%}
+                    </form>
+               </div>
+          </div>
+     </body>
+</html>

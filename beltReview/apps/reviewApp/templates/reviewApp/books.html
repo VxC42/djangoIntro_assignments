@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          {% load staticfiles %}
+          <link rel="stylesheet" href="{% static 'reviewApp/css/styles.css' %}" media="screen">
+          <title>Books Home</title>
+     </head>
+     <body>
+
+          <div class="nav">
+               <span class="inline">Welcome, {{user.name}}!</span>
+               <span class="right"><a href="/add"> Add Book and Review</a>
+               <a href="/logout"> Logout </a></span>
+          </div>
+          <div class="divbox">
+               <h4> Recent Book Reviews</h4>
+               {%for review in reviews|slice:":3"%}
+
+                    <ul>
+                         <li><a href="/book/{{review.books.id}}"><h3>{{review.books.title}}</h3></a></li>
+
+                         <ul>
+                              <li>Rating: {{review.rating}}</li>
+                              <li><a href="/user/{{review.users.id}}">{{review.users.name}}</a> says:
+                                   <span class='italics'>"{{review.review}}"</span>
+                              </li>
+                              <li>
+                                   <span class='italics'>Posted on {{review.created_at}}</span>
+                              </li>
+                         </ul>
+
+                    </ul>
+               {%endfor%}
+
+          </div>
+          <div class="other">
+               <h4> Other Books with Reviews</h4>
+               <div class="scroll">
+                    {%for book in books%}
+                         <ul>
+                              <li><a href="/book/{{book.id}}">{{book.title}}</a></li>
+                         </ul>
+                    {%endfor%}
+               </div>
+          </div>
+
+     </body>
+</html>

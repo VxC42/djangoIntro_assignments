@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          {% load staticfiles %}
+          <link rel="stylesheet" href="{% static 'reviewApp/css/styles.css' %}" media="screen">
+          <title>User Reviews</title>
+     </head>
+     <body>
+          <div class="nav">
+
+               <span class="right">
+                    <a href="/books">Home</a>
+                    <a href="/add">Add Book and Review</a>
+                    <a href="/logout">Logout </a>
+               </span>
+          </div>
+          <div class="divbox">
+               <h4> User Alias: {{user.username}}</h4>
+               <h5> Name: {{user.name}}</h5>
+               <h5> Email: {{user.email}}</h5>
+
+               <h5>
+                    Total Reviews:
+                    {%if reviews%}{{reviews.count}}
+                    {%else%}
+                    0
+                    {%endif%}
+               </h5>
+               <br>
+               <p>Posted Reviews on the following books:</p>
+               <ul>{%for review in reviews%}
+                    <li><a href="/book/{{review.books.id}}">{{review.books.title}}</a>
+                    </li>
+                    {%endfor%}
+               </ul>
+
+
+     </body>
+</html>

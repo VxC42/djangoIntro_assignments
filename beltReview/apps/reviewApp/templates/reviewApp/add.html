@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          {% load staticfiles %}
+          <link rel="stylesheet" href="{% static 'reviewApp/css/styles.css' %}" media="screen">
+          <title>Add Book and Review</title>
+     </head>
+     <body>
+          <div class="nav">
+               <span class="right"><a href="/books"> Home</a>
+               <a href="/logout"> Logout </a></span>
+          </div>
+
+          <h3> Add a New Book Title and a Review:</h3>
+          {%if errors%}
+          <div id="flashes">
+               <p>
+
+                    <ul>
+                         {%for message in errors%}
+                              <li>{{message}}</li>
+                         {%endfor%}
+                    </ul>
+
+               </p>
+          </div>
+          {%endif%}
+
+          <div id="addBook">
+               <form action="addBook" method="post">
+                    <p>Book Title: <input class="textfield" type="text" name="title"></p>
+                    <p>Author:
+                         {%if authors%}
+                         Choose from the list:
+                         <select class="author" name="authorSelect">
+                              {%for author in authors%}
+                              <option value="{{author.author}}">{{author.author}}</option>
+                              {%endfor%}
+                         </select>
+                         {%endif%}
+                         <p>Add a new author: <input class="textfield" type="text" name="authorType"></p>
+                    </p>
+                    <p>Review: <textarea name="review"></textarea></p>
+                    <p>Rating:
+                         <select id="rating" name="rating">
+                              <option value="5">5</option>
+                              <option value="4">4</option>
+                              <option value="3">3</option>
+                              <option value="2">2</option>
+                              <option value="1">1</option>
+                         </select>
+                    </p>
+
+                    <input class="button" type="submit" value="Add Book and Review">
+                    {%csrf_token%}
+               </form>
+          </div>
+
+
+     </body>
+</html>
